@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tarjetas de felicitacion</title>
+</head>
+<body style="background-color: gray;">
+
+<a style="color: white;" href="index.html">Atras</a>
+
+<div align="center" > 
+
+<section id="llenado">
+<h1>Crea tu tarjeta de felicitación</h1><br>
+
+
+
+    <h4><i class="fa fa-heart" aria-hidden="true"></i> Elija un tema</h4><br>
+    <form name="frmDatos">
+  <input type="radio" name="tema" value="SanValentin" onclick="toggle(this)" onchange="document.getElementById('audio').src = 'audio/golden.mp3'" onchange="document.getElementById('tarje').style.fontFamily = 'Arial'"> San Valentin
+  <input type="radio" name="tema" value="Cumpleaños" onclick="toggle(this)" onchange="document.getElementById('audio').src = 'audio/cumple.mp3'" onchange="document.getElementById('tarje').style.fontFamily = 'Verdana'"> Feliz Cumpleaños
+  <input type="radio" name="tema" value="Motivacion" onclick="toggle(this)" onchange="document.getElementById('audio').src = 'audio/motivacion.mp3'" onchange="document.getElementById('tarje').style.fontFamily = 'Franklin Gothic Medium'"> Motivación
+    
+
+
+
+    <h4><i class="fa fa-camera" aria-hidden="true"></i> Elija una imagen</h4><br>
+    <div id="primeras">
+        <input type="radio" name="tema" value="img/sv1.jpg" > <img src="img/sv1.jpg">
+<input type="radio" name="tema" value="San Valentin"> <img src="img/fc1.jpg">
+<input type="radio" name="tema" value="Motivacion" > <img id="img3" src="img/m3.jpg">
+    </div>
+    <div id="sValentin">
+    
+    <input type="radio" name="tema" value="img/sv1.jpg" onchange="document.getElementById('imagen').src= this.value"> <img src="img/sv1.jpg">
+  <input type="radio" name="tema" value="img/sv2.jpg" onchange="document.getElementById('imagen').src= this.value"> <img style="height: 170px;" src="img/sv3.jpg">
+  <input type="radio" name="tema" value="img/sv3.jpg" onchange="document.getElementById('imagen').src= this.value"> <img style="height: 170px;" id="img3" src="img/sv2.jpg">
+
+</div>
+
+<div id="Cumpleaños">
+    
+    <input type="radio" name="tema" value="img/fc1.jpg" onchange="document.getElementById('imagen').src= this.value"> <img src="img/fc1.jpg">
+  <input type="radio" name="tema" value="img/fc2.jpg" onchange="document.getElementById('imagen').src= this.value"> <img src="img/fc2.jpg">
+  <input type="radio" name="tema" value="img/fc3.jpg" onchange="document.getElementById('imagen').src= this.value"> <img id="img3" src="img/fc3.jpg">
+
+</div>
+
+<div id="Motivacion">
+    
+    <input type="radio" name="tema" value="img/m1.pg" onchange="document.getElementById('imagen').src= this.value"> <img src="img/m1.png">
+  <input type="radio" name="tema" value="img/m2.jpng" onchange="document.getElementById('imagen').src= this.value"> <img src="img/m2.jpg">
+  <input type="radio" name="tema" value="img/m3.jpg" onchange="document.getElementById('imagen').src= this.value"> <img id="img3" src="img/m3.jpg">
+
+</div>
+
+
+    <h4><i class="fa fa-pencil" aria-hidden="true"></i> Contenido</h4>
+    
+    <script type="text/javascript">
+        var titulo;
+        var subtitulo;
+        var autor;
+        var mensaje;
+    </script>
+
+        <input type="text" name="titulo" placeholder="Ingrese el titulo" id="titulo" onchange="document.getElementById('txtTitulo').innerHTML = titulo = this.value">
+        <input type="text" name="subtitulo" placeholder="Ingrese el subtitulo" id="subtitulo" onchange="document.getElementById('txtSubtitulo').innerHTML = subtitulo = this.value">
+        <input type="text" name="autor" placeholder="Ingresa el nombre del autor" id="autor" onchange="document.getElementById('txtAutor').innerHTML = autor = this.value"><br><br>
+       
+    
+<textarea rows="1" cols="50"  type="textarea" name="mensaje" id="mensaje" onchange="document.getElementById('parraMensaje').innerHTML = mensaje = this.value"></textarea>
+
+
+
+    <h4><i class="fa fa-paint-brush" aria-hidden="true"></i> Color</h4>
+
+    <div class="colores">
+        
+    <input type="radio" name="tema" value="#588ee2" onchange="document.getElementById('tarje').style.background = this.value">  <img style="height: 190px;" src="img/azul.jpg" id="fon">
+  <input type="radio" name="tema" value="#ea899a" onchange="document.getElementById('tarje').style.background = this.value">  <img style="height: 190px;" src="img/rosa.jpg" id="fon">
+  <input type="radio" name="tema" value="#dd3c43" onchange="document.getElementById('tarje').style.background = this.value"> <img  style="height: 190px;" src="img/rojo.png" id="fon">
+
+    </div><br><br>
+
+    
+ <input  type="button"  onclick="generar();" value="Generar">
+</section>
+
+<script src="https://use.fontawesome.com/3938279672.js"></script>
+<script type="text/javascript">
+            function toggle(elemento) {
+              if(elemento.value=="SanValentin") {
+                  document.getElementById("sValentin").style.display = "block";
+                  document.getElementById("Cumpleaños").style.display = "none";
+                  document.getElementById("Motivacion").style.display = "none";
+                  document.getElementById("primeras").style.display = "none";
+               }else{
+                   if(elemento.value=="Cumpleaños"){
+                       document.getElementById("sValentin").style.display = "none";
+                  document.getElementById("Cumpleaños").style.display = "block";
+                  document.getElementById("Motivacion").style.display = "none";
+                  document.getElementById("primeras").style.display = "none";
+                   }else{
+                       if(elemento.value=="Motivacion"){
+                            document.getElementById("sValentin").style.display = "none";
+                  document.getElementById("Cumpleaños").style.display = "none";
+                  document.getElementById("Motivacion").style.display = "block";
+                  document.getElementById("primeras").style.display = "none";
+                        }  
+                    }
+                }
+              }
+    </script>
+    </section>
+
+
+
+       <section id="final">
+      
+      <section id="tarje">
+        
+      <h1 id="txtTitulo"></h1>
+      <p id="txtSubtitulo"></p>
+
+      <img src="" id="imagen"><br>
+      <div id="txtMensaje" ><p id="parraMensaje"></p></div><br>
+
+
+
+      
+      
+      
+      <p id="fecha"></p>
+      <audio src="img/FANFARRIAS.mp3" id="audio" controls></audio>
+      <p id="txtAutor"></p><br><br><br>
+    
+    </section>
+    <input type="submit" name="Salir" onclick="salir();" value="Salir">
+    </section>
+
+          </div>
+
+
+  <script type="text/javascript">
+function generar(){
+  document.getElementById('llenado').style.display='none';
+  document.getElementById('final').style.display='block';
+}
+function salir(){
+  document.getElementById('llenado').style.display='block';
+  document.getElementById('final').style.display='none';
+}
+  </script>
+
+
+</body>
+</html>

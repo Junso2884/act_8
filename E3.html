@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ejercicio 3</title>
+<meta charset="utf-8">
+  <link rel="stylesheet" type="text/css"href="main.css">
+</head>
+<body class="body">
+
+  <a style="color: white;" href="index.html">Atras</a>
+
+
+<div align="center">
+
+
+<form name="frmDatos">
+  <span>Votos</span><br><br>
+
+
+	<input type="text" name="nombre" placeholder="Ingrese su nombre"><br><br>
+	<input type="text" name="ciudad" placeholder="Ingrese su ciudad"><br><br>
+	<select name="secciones" id="secciones"> 
+		<option>Seleccione una opcion...</option>
+		<option value="Centro">Centro</option>
+		<option value="Norte">Norte</option>
+		<option value="Sur">Sur</option>
+		
+	</select><br><br>
+	<input type="text" name="cp" placeholder="Ingrese su codigo postal"><br><br>
+	<label style="color: white;">Ingresa el numero del emprendedor que crees es el mejor:</label><br><br>
+	<label style="color: white;">1.Rodrigo Herrera <br>2.Carlos Bremer <br>3.Arturo Ayub</label><br><br>
+	<input type="text" name="emprendedor" placeholder="Ingrese el numero del emprendedor"><br><br>
+<input type="submit" name="emite" value="Emitir voto" onclick="emitir(this.value);">
+</form>
+
+
+
+</div>
+
+<script>
+function emitir() {
+	var nombre=document.frmDatos.nombre.value;
+	var ciudad=document.frmDatos.ciudad.value;
+	var seccion=document.getElementById("secciones").value;
+	var cp=document.frmDatos.cp.value;
+  var txt;
+  var opcion=parseInt(document.frmDatos.emprendedor.value);
+  switch(opcion){
+  	case 1:
+  	   		 if (confirm("¿Tus datos son correctos? \n"+"Nombre: "+nombre+"\n"+"Ciudad: "+ciudad+"\n"+"Seccion: "+seccion+"\n"+"Emprendedor: Rodrigo Herrera")) {
+    alert("Los datos de tu voto fueron registrados correctamente");
+  } else {
+   alert("Vuelve a ingresar tus datos");
+  }
+  break;
+  case 2:
+  	   		 if (confirm("¿Tus datos son correctos? \n"+"Nombre: "+nombre+"\n"+"Ciudad: "+ciudad+"\n"+"Seccion: "+seccion+"\n"+"Emprendedor: Carlos Bremer")) {
+    alert("Los datos de tu voto fueron registrados correctamente");
+  } else {
+   alert("Vuelve a ingresar tus datos");
+  }
+  break;
+  case 3:
+  	   		 if (confirm("¿Tus datos son correctos? \n"+"Nombre: "+nombre+"\n"+"Ciudad: "+ciudad+"\n"+"Seccion: "+seccion+"\n"+"Emprendedor: Arturo Ayub")) {
+    alert("Los datos de tu voto fueron registrados correctamente");
+  } else {
+   alert("Vuelve a ingresar tus datos");
+  }
+  break;
+  default:
+  alert("Ingresa una opcion valida");
+  }
+ 
+  
+}
+</script>
+</body>
+</html>

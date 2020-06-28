@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Borde</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body class="bod">
+
+	<a style="color: black;" href="index.html">Atras</a>
+
+<div align="center" id="imagen">
+	<img src="img/lego.png" style="border-style: outset; border-color: rgb(100,0,0);">
+	
+</div>
+
+<div align="center">
+<input type="radio" name="tema" value="dotted" onchange="document.getElementById('imagen').style.borderStyle= this.value">Punteado
+<input type="radio" name="tema" value="double" onchange="document.getElementById('imagen').style.borderStyle= this.value">Linea delgada
+<input type="radio" name="tema" value="dashed" onchange="document.getElementById('imagen').style.borderStyle= this.value">Punteado largo
+<input type="radio" name="tema" value="solid" onchange="document.getElementById('imagen').style.borderStyle= this.value">Solido
+
+<input type="radio" name="tema" value="outset" onchange="document.getElementById('imagen').style.borderStyle= this.value">Degradado
+<input type="color" id="favcolor" name="favcolor" onchange="document.getElementById('imagen').style.borderColor= this.value">
+
+</div>
+<style type="text/css">
+	body{
+
+	}
+	#divImg{
+		padding-left: 20%;
+		padding-top: 5%;
+	}
+	img{
+		width: 800px;
+		margin-left: : 20%; 
+		margin-top: : 4%;
+						
+	}
+	
+
+</body>
+</html>

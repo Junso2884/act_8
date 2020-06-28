@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Listas</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body class="body">
+
+	<a style="color: white;" href="index.html">Atras</a>
+
+
+	<div align="center" style="color: white;">
+	<section>
+		<ol id="lista">
+			<li>Numero 1</li>
+			<li>Numero 2</li>
+			<li>Numero 3</li>
+		</ol>
+	
+
+	<button type="button" onclick="agrega();" id="btn">Agregar una opción</button>
+
+	</section>
+	</div>
+
+	<script type="text/javascript">
+		
+		let i=4;
+		function agrega(){
+
+			let elemento=document.createElement("li");
+			let texto=document.createTextNode("Numero"+i);
+			elemento.appendChild(texto);
+			let lista=document.getElementById("lista");
+			lista.appendChild(elemento);
+
+			i++;
+		}
+
+
+
+	</script>
+
+</body>
+</html>

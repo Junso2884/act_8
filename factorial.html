@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Factorial</title>
+		<!--Custom css -->
+		<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body class="body">
+
+	<a style="color: white;" href="index.html">Atras</a>
+
+	<div align="center">
+		<h1 style="color: white;">Factorial</h1>
+		<H1 id="message" style="color: white;"></H1><br>
+	<form name="frmFact" >
+	<input type="text" name="numero" placeholder="Ingresa el numero">
+	<br>
+		<input type="button" onclick="calcular(this.value)" value="Calcular">
+	</form>
+
+	</div>
+
+	
+	<script type="text/javascript">
+		function calcular(){
+			var n=parseInt(frmFact.numero.value);
+			var i=1;
+			var j=1;
+			var res=1;
+
+			while(i<=n){
+
+				res=res*i;
+				i++;
+				j++;
+				document.getElementById("message").innerHTML="El factorial es: "+res;
+			}
+		}
+	</script>
+</body>
+</html>

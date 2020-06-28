@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora</title>
+		<!--Custom css -->
+		<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body class="body">
+
+	<a style="color: white;" href="index.html">Atras</a>
+
+	<div align="center" style="margin-top: 100px;">
+
+	<textarea id="salida" cols="10" rows="10"></textarea><br>
+	<input type="button" value="Sumar" onclick="Sumar();"><br>
+	<input type="button" value="Restar" onclick="Restar();"><br>
+	<input type="button" value="Multiplicar" onclick="Multiplicar();"><br>
+	<input type="button" value="Dividir" onclick="Dividir();"><br>
+
+	<script type="text/javascript">
+		
+		var n1=9; var n2=16;
+		function Sumar(){
+			document.getElementById("salida").innerHTML=n1+n2;
+
+		}
+
+		function Restar(){
+			document.getElementById("salida").innerHTML=n1-n2;
+		}
+
+		function Multiplicar(){
+			document.getElementById("salida").innerHTML=n1*n2;
+
+		}
+
+		function Dividir(){
+			document.getElementById("salida").innerHTML=n1/n2;
+
+		}
+
+		</script>
+
+
+	</div>)
+</body>
+</html>

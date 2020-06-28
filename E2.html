@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Suma</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css"href="main.css">
+</head>
+<body class="body">
+
+	<a style="color: white;" href="index.html">Atras</a>
+
+<div align="center">
+<section style="color: white;">
+<h1>Suma de numeros</h1>
+<h4 id="res"></h4>
+<p>Click para comenzar con las sumas</p>
+
+<button onclick="myFunction()">Comenzar</button>
+
+<p id="demo"></p>
+</section>
+</div>
+
+
+<script>
+function myFunction() {
+  var suma=0;
+  
+
+  do{
+  	var num = parseInt(prompt("Por favor ingresa un nuevo numero", ));
+  	suma=suma+num;
+  	
+  }while(num>0);
+var res=suma-num;
+  document.getElementById("res").innerHTML =
+    "El acumulado de la suma es:"+res ;
+}
+</script>
+</body>
+</html>
